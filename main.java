@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Random;
 
 public class main {
     public static void main(String[] args) {
@@ -22,7 +23,25 @@ public class main {
             System.out.println("Escolha uma opção:\n1-Pegar a faca e lutar o goblin.\n2-Correr e fugir do goblin");
             String opcaoGoblin = scanner2.nextLine();
             if (opcaoGoblin.equalsIgnoreCase("1")) {
-                System.out.println("Você encontra goblin.\nAo olhar para ele você vê um olhar já cansado, e atrás dele você vê o que parece ser uma criança assustada e em choque.\n\n__________________________\n||        GOBLIN        ||\n||HP: 10                ||\n||______________________||\n||     PLAYER STATUS     ||\n||HP: 100                   ||\n||ARMOR: 0                   ||\n--------------------------");
+                System.out.println("Você encontra goblin.\nAo olhar para ele você vê um olhar já cansado, e atrás dele você vê o que parece ser uma criança assustada e em choque.\n\n__________________________\n||        GOBLIN        ||\n||HP: 10                ||\n||______________________||\n||     PLAYER STATUS    ||\n||HP: 100               ||\n||ARMOR: 0              ||\n--------------------------");
+                int goblinLife = 10;
+                Scanner scanner3 = new Scanner(System.in);
+                while (goblinLife > 0) {
+                    System.out.println("Digite a opção que deseja:\n1-Atacar\n2-fugir\n3-Conversar sobre seus sentimentos\n");
+                    String lutaGoblin = scanner3.nextLine();
+                    if (lutaGoblin.equalsIgnoreCase("1")) {
+                        goblinLife -= 5;
+                        System.out.println("Você atacou o goblin, causou 5 DMG\n");
+                    }
+                    Random random = new Random();
+                    int numeroAleatorio = random.nextInt(20) + 1;
+                    if (numeroAleatorio > 15) {
+                        lifeJogador -= 2;
+                        System.out.println("O goblin te atacou, menos 2HP:\nHP " + lifeJogador);
+                    }
+                }
+                System.out.println("sua vida pós batalha: " + lifeJogador); 
+                scanner3.close(); 
             }
             scanner2.close();
         }
