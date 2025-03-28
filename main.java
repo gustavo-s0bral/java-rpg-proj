@@ -21,6 +21,5 @@ public class main {
         else{
             System.out.println("Você digitou uma opção inválida");
         }
-        
     }
 }
