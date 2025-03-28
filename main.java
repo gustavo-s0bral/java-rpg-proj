@@ -22,7 +22,7 @@ public class main {
             System.out.println("Escolha uma opção:\n1-Pegar a faca e lutar o goblin.\n2-Correr e fugir do goblin");
             String opcaoGoblin = scanner2.nextLine();
             if (opcaoGoblin.equalsIgnoreCase("1")) {
-                System.out.println("oi");
+                System.out.println("Você encontra goblin.\nAo olhar para ele você vê um olhar já cansado, e atrás dele você vê o que parece ser uma criança assustada e em choque.\n\n__________________________\n||.       GOBLIN.                       ||");
             }
             scanner2.close();
         }
