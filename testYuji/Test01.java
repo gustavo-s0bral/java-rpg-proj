@@ -1,4 +1,3 @@
-package testYuji;
 import java.util.Scanner;
 import java.util.Random;
 
@@ -10,12 +9,12 @@ public class Test01
 
         Scanner scan1 = new Scanner(System.in);
         System.out.println("O que Theodore fará? \n\n1-) Resistir \n2-) Desviar \n3-) Não resistir");
-        int decisao1 = scan1.nextInt();
+        String decisao1 = scan1.nextLine();
         scan1.close();
 
         Random random = new Random();
 
-        if (decisao1 == 1)
+        if (decisao1.equals("1"))
         {
             int resistir = random.nextInt(20) + 1;
             
@@ -28,7 +27,7 @@ public class Test01
                 System.out.println("Theodore é capaz de apresentar resistência, antes de ser puxado pelo homem para dentro do portal.");
             }
         }
-        else if (decisao1 == 2)
+        else if (decisao1.equals("2"))
         {
             int esquiva = random.nextInt(20) + 1;
 
@@ -41,7 +40,7 @@ public class Test01
                 System.out.println("Theodore não esquivou-se da investida do homem, porém foi puxado para dentro do portal.");
             }
         }
-        else if (decisao1 == 3)
+        else if (decisao1.equals("3"))
         {
             System.out.println("Theodore n é um pussy q deixaria um cara aleatório sugá-lo");
         }
