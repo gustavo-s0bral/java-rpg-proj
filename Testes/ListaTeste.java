@@ -9,7 +9,7 @@ public class Armas{
     // cria constante para as armas 
     public static final Armas armaDeFogo = new Armas("Arma de fogo", 30, 80);
     public static final Armas faca = new Armas("Faca", 10, 15);
-
+    
     // declara atributos das armas
     public Armas(String nomeArma, int danoArma, int danoArmaEspecial){
         this.nomeArma = nomeArma;
